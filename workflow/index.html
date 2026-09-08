@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7d2231">
+<title>진료 워크플로 도구 — 심장내과 임상 도구</title>
+<meta name="description" data-i18n-attr="content:meta_desc" content="판독문 작성, DICOM 비식별화, 영상 자료 제작처럼 진료·발표 준비에서 반복되는 작업을 처리합니다.">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="langSwitch" role="group" aria-label="Language / 언어">
+    <button type="button" id="lang-ko" onclick="setLang('ko')" aria-pressed="true">한국어</button>
+    <button type="button" id="lang-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+  </div>
+  <p class="crumb">← <a href="../" data-i18n="crumb">심장내과 임상 도구 모음</a></p>
+  <header class="masthead">
+    <p class="eyebrow" data-i18n="eyebrow">Cardiology · Clinical Tools &amp; Research Harnesses</p>
+    <h1 data-i18n="title">진료 워크플로 도구</h1>
+    <p class="lede" data-i18n="lede">판독문 작성, DICOM 비식별화, 영상 자료 제작처럼 진료·발표 준비에서 반복되는 작업을 처리합니다.</p>
+  </header>
+
+  <div class="grid">
+      <div class="card">
+        <h3 data-i18n="tee_report_maker_h">TEE Report Maker</h3>
+        <p class="slug">tee-report-maker</p>
+        <p class="desc" data-i18n="tee_report_maker_d">체크·클릭으로 표준 TEE 결론문을 생성해 판독 시스템에 붙여넣습니다. 단일 HTML, 완전 오프라인, 어떤 데이터도 저장하지 않습니다.</p>
+        <div class="links"><a class="primary" href="https://tipcode-cpu.github.io/tee-report-maker/TEE_Report_Maker.html" data-i18n="open">열기</a><a href="https://github.com/tipcode-cpu/tee-report-maker">GitHub</a></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="dicom_anon_h">dicom-anon</h3>
+        <p class="slug">dicom_anon</p>
+        <p class="desc" data-i18n="dicom_anon_d">DICOM 헤더의 환자정보 태그를 비우고 UID를 새로 발급하는 CLI. 원본은 건드리지 않습니다. 픽셀에 새겨진 정보는 제거하지 못하므로 육안 확인이 필요합니다.</p>
+        <div class="links"><a href="https://github.com/tipcode-cpu/dicom_anon">GitHub</a></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="dicom2pptx_h">dicom2pptx</h3>
+        <p class="slug">dicom2pptx</p>
+        <p class="desc" data-i18n="dicom2pptx_d">DICOM 시네 루프를 실제로 재생되는 PowerPoint 덱으로 변환합니다. 완전 로컬 실행이며, 사람이 직접 확인하기 전에는 다음 단계로 넘어가지 않습니다.</p>
+        <div class="links"><a href="https://github.com/tipcode-cpu/dicom2pptx">GitHub</a></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="video_to_pptx_h">video-to-pptx</h3>
+        <p class="slug">video-to-pptx</p>
+        <p class="desc" data-i18n="video_to_pptx_d">영상 파일을 슬라이드당 여러 개씩 배치하고 반복재생·되감기를 OOXML에 직접 기록합니다. 비식별화가 끝난 자료의 덱 조립용.</p>
+        <div class="links"><a href="https://github.com/tipcode-cpu/video-to-pptx">GitHub</a></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="frontend_medslides_h">frontend-medslides</h3>
+        <p class="slug">frontend-medslides</p>
+        <p class="desc" data-i18n="frontend_medslides_d">PowerPoint 덱을 디자인 시스템으로 해석해, 저자의 디자인 언어를 유지한 채 편집 가능한 HTML 프레젠테이션으로 재구성합니다.</p>
+        <div class="links"><a href="https://github.com/tipcode-cpu/frontend-medslides">GitHub</a></div>
+      </div>
+  </div>
+
+  <footer>
+    <p data-i18n="f_1"><b>면책</b> — 여기 있는 계산기와 시뮬레이터는 임상 교육 및 판단 보조 목적입니다. 정식 검사와 임상의의 종합 평가를 대체하지 않으며, 자동 분류는 교육을 위해 단순화된 것이므로 개별 환자의 진료 판단에 그대로 사용해서는 안 됩니다.</p>
+    <p data-i18n="f_2"><b>데이터</b> — 웹 도구에는 환자 식별정보 입력란이 없고, 입력값을 저장하거나 외부로 전송하지 않습니다. DICOM을 다루는 도구는 원본 파일을 로컬 밖으로 내보내지 않으며, 픽셀에 새겨진 환자정보는 사람이 직접 확인하도록 게이트를 둡니다.</p>
+    <p data-i18n="byline">최강운 · 영남대학교병원 심장내과 — <a href="https://github.com/tipcode-cpu">github.com/tipcode-cpu</a></p>
+  </footer>
+</div>
+<script>
+var I18N_EN = {
+  "doc_title": "Clinical workflow tools — Cardiology tools",
+  "meta_desc": "For the repetitive parts of reporting, de-identification and preparing imaging material.",
+  "title": "Clinical workflow tools",
+  "lede": "For the repetitive parts of reporting, de-identification and preparing imaging material.",
+  "crumb": "Cardiology tools",
+  "open": "Open",
+  "eyebrow": "Cardiology · Clinical Tools &amp; Research Harnesses",
+  "tee_report_maker_h": "TEE Report Maker",
+  "tee_report_maker_d": "Build a standard TEE conclusion by checkbox and paste it into the reporting system. Single HTML file, fully offline, nothing stored.",
+  "dicom_anon_h": "dicom-anon",
+  "dicom_anon_d": "CLI that blanks patient tags in DICOM headers and reissues UIDs, leaving the original untouched. It cannot remove information burned into the pixels — check those by eye.",
+  "dicom2pptx_h": "dicom2pptx",
+  "dicom2pptx_d": "Turns DICOM cine loops into a PowerPoint deck that actually plays. Runs entirely locally and will not advance a stage until a human has looked at the preview.",
+  "video_to_pptx_h": "video-to-pptx",
+  "video_to_pptx_d": "Places videos several to a slide and writes loop and rewind directly into the OOXML. For assembling decks from material that is already de-identified.",
+  "frontend_medslides_h": "frontend-medslides",
+  "frontend_medslides_d": "Reads a PowerPoint deck as a design system and rebuilds it as an editable, component-based HTML presentation that keeps the author's design language.",
+  "f_1": "<b>Disclaimer</b> — the calculators and simulators here are for clinical education and decision support. They do not replace formal studies or the clinician's comprehensive assessment, and their automated classifications are simplified for teaching and must not be applied directly to an individual patient's care.",
+  "f_2": "<b>Data</b> — the web tools have no patient-identifying fields and neither store nor transmit what is entered. The DICOM tools keep original files local and gate on a human check for information burned into the pixels.",
+  "byline": "Kang-Un Choi, MD, PhD · Division of Cardiology, Yeungnam University Medical Center — <a href=\"https://github.com/tipcode-cpu\">github.com/tipcode-cpu</a>"
+};
+</script>
+<script src="../assets/i18n.js"></script>
+</body>
+</html>

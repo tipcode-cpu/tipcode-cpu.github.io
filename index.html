@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7d2231">
+<title>심장내과 임상 도구 모음</title>
+<meta name="description" data-i18n-attr="content:meta_desc" content="심장내과 임상 계산기 · 교육 시뮬레이터 · 진료 워크플로 도구 · 연구 하네스 모음">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="langSwitch" role="group" aria-label="Language / 언어">
+    <button type="button" id="lang-ko" onclick="setLang('ko')" aria-pressed="true">한국어</button>
+    <button type="button" id="lang-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+  </div>
+  <header class="masthead">
+    <p class="eyebrow" data-i18n="eyebrow">Cardiology · Clinical Tools &amp; Research Harnesses</p>
+    <h1 data-i18n="title">심장내과 임상 도구 모음</h1>
+    <p class="lede" data-i18n="lede">진료·교육·연구에서 반복되는 작업을 줄이기 위해 만든 도구들입니다. 계산기와 시뮬레이터는 브라우저에서 바로 열리는 단일 파일이며, 환자 식별정보를 입력받거나 저장하지 않습니다.</p>
+  </header>
+
+  <div class="catgrid">
+    <a class="cat" href="calculators/">
+      <h2 data-i18n="c_calculators">임상 계산기</h2>
+      <p data-i18n="c_calculators_n">진료 중 바로 쓰는 위험도·점수 계산기. 모두 설치형 웹앱(PWA)이며 오프라인에서 동작합니다.</p>
+      <span class="meta" data-i18n="c_calculators_m">도구 5개 →</span>
+    </a>
+    <a class="cat" href="simulators/">
+      <h2 data-i18n="c_simulators">교육 시뮬레이터</h2>
+      <p data-i18n="c_simulators_n">변수를 직접 움직이며 원리를 확인하는 인터랙티브 교육 도구. 전공의·학생 강의용으로 만들었습니다.</p>
+      <span class="meta" data-i18n="c_simulators_m">도구 3개 →</span>
+    </a>
+    <a class="cat" href="workflow/">
+      <h2 data-i18n="c_workflow">진료 워크플로 도구</h2>
+      <p data-i18n="c_workflow_n">판독문 작성, DICOM 비식별화, 영상 자료 제작처럼 진료·발표 준비에서 반복되는 작업을 처리합니다.</p>
+      <span class="meta" data-i18n="c_workflow_m">도구 5개 →</span>
+    </a>
+    <a class="cat" href="research/">
+      <h2 data-i18n="c_research">연구 · 행정 하네스</h2>
+      <p data-i18n="c_research_n">Claude Code / Cowork 플러그인 형태의 연구 워크플로. 설계에서 투고까지, 그리고 IRB·행정 서류를 단계별 게이트로 처리합니다.</p>
+      <span class="meta" data-i18n="c_research_m">도구 6개 →</span>
+    </a>
+  </div>
+
+  <footer>
+    <p data-i18n="f_1"><b>면책</b> — 여기 있는 계산기와 시뮬레이터는 임상 교육 및 판단 보조 목적입니다. 정식 검사와 임상의의 종합 평가를 대체하지 않으며, 자동 분류는 교육을 위해 단순화된 것이므로 개별 환자의 진료 판단에 그대로 사용해서는 안 됩니다.</p>
+    <p data-i18n="f_2"><b>데이터</b> — 웹 도구에는 환자 식별정보 입력란이 없고, 입력값을 저장하거나 외부로 전송하지 않습니다. DICOM을 다루는 도구는 원본 파일을 로컬 밖으로 내보내지 않으며, 픽셀에 새겨진 환자정보는 사람이 직접 확인하도록 게이트를 둡니다.</p>
+    <p data-i18n="byline">최강운 · 영남대학교병원 심장내과 — <a href="https://github.com/tipcode-cpu">github.com/tipcode-cpu</a></p>
+  </footer>
+</div>
+<script>
+var I18N_EN = {
+  "doc_title": "Cardiology tools — Kang-Un Choi",
+  "meta_desc": "Clinical calculators, teaching simulators, imaging workflow tools and research harnesses in cardiology",
+  "eyebrow": "Cardiology · Clinical Tools &amp; Research Harnesses",
+  "title": "Cardiology tools",
+  "lede": "Tools built to take the repetition out of clinical work, teaching and research. The calculators and simulators are single files that open straight in a browser, and none of them ask for or store patient-identifying information.",
+  "c_calculators": "Clinical calculators",
+  "c_calculators_n": "Risk scores for use at the bedside. All are installable web apps (PWA) and work offline.",
+  "c_calculators_m": "5 tools →",
+  "c_simulators": "Teaching simulators",
+  "c_simulators_n": "Interactive tools that show a principle by letting you move the variable. Built for resident and student teaching.",
+  "c_simulators_m": "3 tools →",
+  "c_workflow": "Clinical workflow tools",
+  "c_workflow_n": "For the repetitive parts of reporting, de-identification and preparing imaging material.",
+  "c_workflow_m": "5 tools →",
+  "c_research": "Research &amp; administration harnesses",
+  "c_research_n": "Research workflows packaged as Claude Code / Cowork plugins — design through submission, plus IRB and administrative paperwork, each behind a phase gate.",
+  "c_research_m": "6 tools →",
+  "f_1": "<b>Disclaimer</b> — the calculators and simulators here are for clinical education and decision support. They do not replace formal studies or the clinician's comprehensive assessment, and their automated classifications are simplified for teaching and must not be applied directly to an individual patient's care.",
+  "f_2": "<b>Data</b> — the web tools have no patient-identifying fields and neither store nor transmit what is entered. The DICOM tools keep original files local and gate on a human check for information burned into the pixels.",
+  "byline": "Kang-Un Choi, MD, PhD · Division of Cardiology, Yeungnam University Medical Center — <a href=\"https://github.com/tipcode-cpu\">github.com/tipcode-cpu</a>"
+};
+</script>
+<script src="assets/i18n.js"></script>
+</body>
+</html>
