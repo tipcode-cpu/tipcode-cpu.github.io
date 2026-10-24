@@ -201,7 +201,7 @@ def tool_card(tl):
         tag = '<span class="tag">%s</span>' % tl["tag"]
     elif tl.get("tag_ko"):
         tag = '<span class="tag">%s</span>' % tl["tag_ko"]
-    key = tl["repo"].replace("-", "_").replace(".", "_")
+    key = tl.get("key") or tl["repo"].replace("-", "_").replace(".", "_")
     links = []
     if tl.get("live"):
         links.append('<a class="primary" href="%s" data-i18n="open">열기</a>' % tl["live"])
@@ -256,7 +256,7 @@ def build(out):
               "crumb": 'Cardiology tools', "open": "Open",
               "eyebrow": "Cardiology · Clinical Tools &amp; Research Harnesses"}
         for tl in c["tools"]:
-            key = tl["repo"].replace("-", "_").replace(".", "_")
+            key = tl.get("key") or tl["repo"].replace("-", "_").replace(".", "_")
             tag = ""
             if tl.get("tag"):
                 tag = '<span class="tag">%s</span>' % tl["tag"]
