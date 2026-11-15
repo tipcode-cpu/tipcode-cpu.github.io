@@ -13,7 +13,7 @@ switched with the `한국어 / EN` buttons; the choice is stored on the device.
 |---|---|
 | `/` | 큰 카테고리 4개 |
 | `/calculators/` | 임상 계산기 (5) |
-| `/simulators/` | 교육 시뮬레이터 (3) |
+| `/simulators/` | 교육 시뮬레이터 (4) |
 | `/workflow/` | 진료 워크플로 도구 (5) |
 | `/research/` | 연구·행정 하네스 (6) |
 
